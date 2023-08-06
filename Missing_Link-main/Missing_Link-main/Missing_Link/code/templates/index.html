@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aesthetic Web UI</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="indeterminate-progress-bar">
+            <div class="indeterminate-progress-bar__progress"></div>
+        </div>
+        <h1>Upload the incident Video</h1>
+        <button id="select-btn">Select Video</button>
+        <input type="file" id="file-input" accept="video/*" name="video" />
+        <button id="upload-btn" disabled>Upload</button>
+        <div id="preview-container">
+            <video id="preview" width="320" height="240" controls></video>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

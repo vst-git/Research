@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Found Face</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>{{res}}</h1>
+        <div class="row">
+            {% for image_url in image_urls %}
+            <div class="col-md-3">
+                <img src="{{ image_url }}" alt="Found Face" width="100%" style="margin: 10px;">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

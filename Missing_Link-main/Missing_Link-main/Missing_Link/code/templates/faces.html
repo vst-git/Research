@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Detected Faces</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="display: flex; flex-wrap: wrap; align-content: center; justify-content: center;">
+        <div>
+            <h1>All The Faces in the videos</h1>
+            <h3>Select the target person you need to look for</h3>
+        </div>
+        <div class="row"
+            style="margin: 20px; display: flex; flex-wrap: wrap; align-content: center; justify-content: center;">
+            {% for face in faces %}
+            <div class="col-md-3">
+                <a href="{{ url_for('target', source=face) }}">
+                    <img src="{{ url_for('static', filename='faces/' + face) }}" class="img-thumbnail"
+                        style="border: 1px red dotted; border-radius: 25px;">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

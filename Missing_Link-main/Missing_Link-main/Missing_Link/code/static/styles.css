@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+button {
+  margin: 0 50px;
+  box-shadow: 3px 2px 20px 5px rgba(0, 0, 0, 0.3);
+}
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: stretch;
+}
+
+h1 {
+  color: #333;
+}
+
+#file-input {
+  display: none;
+}
+
+#select-btn {
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#select-btn:hover {
+  background-color: #0e81d9;
+}
+
+#upload-btn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#upload-btn:hover {
+  background-color: #45a049;
+}
+
+#preview-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#preview {
+  display: none;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 25px;
+  box-shadow: 3px 2px 20px 20px rgba(0, 0, 0, 0.3);
+}
+#live-feed {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.indeterminate-progress-bar {
+  /* Color */
+  background-color: #d1d5db;
+
+  /* Rounded border */
+  border-radius: 9999px;
+
+  /* Size */
+  height: 0.5rem;
+
+  position: relative;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.indeterminate-progress-bar__progress {
+  /* Color */
+  background-color: #3b82f6;
+
+  /* Rounded border */
+  border-radius: 9999px;
+
+  /* Absolute position */
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 50%;
+
+  /* Move the bar infinitely */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: indeterminate-progress-bar;
+}
+
+@keyframes indeterminate-progress-bar {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 100%;
+  }
+}
